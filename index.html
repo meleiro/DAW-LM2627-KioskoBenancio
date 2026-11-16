@@ -1,0 +1,835 @@
+
+<!DOCTYPE html>
+<!--
+    Declara que el documento utiliza HTML5.
+
+    Permite que el navegador interprete el documento
+    utilizando el modo estándar.
+-->
+
+<html lang="es">
+<!--
+    HTML es el elemento raíz del documento.
+
+    lang="es":
+    Indica que el idioma principal es español.
+
+    ACCESIBILIDAD:
+    Los lectores de pantalla pueden utilizar este
+    atributo para aplicar las reglas de pronunciación
+    correspondientes al idioma.
+-->
+
+<head>
+    <!--
+        HEAD contiene los metadatos del documento.
+
+        No debe confundirse con HEADER:
+
+        HEAD:
+            Información técnica del documento.
+
+        HEADER:
+            Contenido introductorio de una página
+            o de una sección.
+    -->
+
+    <meta charset="UTF-8">
+    <!--
+        Establece la codificación UTF-8.
+
+        Permite representar correctamente caracteres
+        como las tildes, la ñ o el símbolo €.
+    -->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!--
+        Configura el área de visualización.
+
+        width=device-width:
+            Establece la anchura del viewport
+            según la anchura del dispositivo.
+
+        initial-scale=1.0:
+            Establece la escala inicial.
+    -->
+
+    <title>Kiosko Benancio</title>
+    <!--
+        TITLE establece el título del documento.
+
+        Suele mostrarse en la pestaña del navegador.
+
+        ACCESIBILIDAD:
+        Un título descriptivo permite identificar
+        la página entre varias pestañas abiertas.
+    -->
+
+</head>
+
+<body>
+    <!--
+        BODY contiene el contenido del documento.
+
+        Incluye elementos como:
+        - Encabezados.
+        - Párrafos.
+        - Enlaces.
+        - Imágenes.
+        - Listas.
+        - Regiones semánticas.
+    -->
+
+
+    <!-- ================================================= -->
+    <!-- ENLACE PARA SALTAR AL CONTENIDO PRINCIPAL          -->
+    <!-- ================================================= -->
+
+    <a href="#contenido-principal">
+        Saltar al contenido principal
+    </a>
+
+    <!--
+        A representa un hipervínculo.
+
+        ATRIBUTO HREF:
+
+        href="#contenido-principal"
+
+        El símbolo # indica que el enlace apunta
+        a un elemento identificado dentro del documento.
+
+        El destino se establece mediante:
+
+            id="contenido-principal"
+
+        ACCESIBILIDAD:
+
+        Permite que una persona que utiliza el teclado
+        pueda acceder directamente al contenido principal,
+        evitando recorrer todos los enlaces del menú.
+
+        PRUEBA CON TECLADO:
+
+        1. Abre la página en el navegador.
+        2. Pulsa Tab hasta seleccionar este enlace.
+        3. Pulsa Enter.
+        4. Comprueba que se accede al contenido principal.
+
+        PRUEBA CON NARRADOR:
+
+        Activa Narrador mediante Windows + Ctrl + Enter.
+
+        Navega hasta el enlace y comprueba
+        cómo anuncia su texto y su función.
+    -->
+
+
+    <!-- ================================================= -->
+    <!-- HEADER: CABECERA SEMÁNTICA                         -->
+    <!-- ================================================= -->
+
+    <header id="inicio">
+        <!--
+            HEADER representa contenido introductorio.
+
+            Puede incluir:
+            - Nombre del sitio.
+            - Logotipo.
+            - Descripción.
+            - Navegación principal.
+
+            ATRIBUTO ID:
+
+            id="inicio"
+
+            Identifica este elemento dentro del documento.
+
+            Cada identificador debe ser único.
+
+            ACCESIBILIDAD:
+
+            Un HEADER de nivel de página puede
+            identificarse como una región de cabecera
+            o banner por las tecnologías de asistencia.
+
+            La etiqueta aporta significado semántico,
+            independientemente de su apariencia visual.
+        -->
+
+
+        <h1>Kiosko Benancio</h1>
+
+        <!--
+            H1 representa un encabezado de nivel 1.
+
+            Identifica el tema principal de la página.
+
+            HTML dispone de seis niveles de encabezados:
+
+            H1, H2, H3, H4, H5 y H6.
+
+            Estos niveles establecen una jerarquía.
+
+            En este documento:
+
+            H1:
+                Nombre principal del negocio.
+
+            H2:
+                Secciones principales.
+
+            H3:
+                Categorías dentro de una sección.
+
+            ACCESIBILIDAD:
+
+            Los lectores de pantalla permiten
+            desplazarse entre encabezados.
+
+            PRUEBA CON NARRADOR:
+
+            1. Activa el modo de exploración.
+            2. Pulsa H para recorrer encabezados.
+            3. Pulsa 1 para localizar encabezados H1.
+
+            La tecla Narrador suele ser Bloq Mayús
+            o Insert, según la configuración.
+        -->
+
+
+        <p>
+            Tu kiosko barrio: prensa, golosinas,
+            bebidas y papelería
+        </p>
+
+        <!--
+            P representa un párrafo.
+
+            Se utiliza para organizar contenido textual.
+
+            En este caso contiene una descripción
+            introductoria de la actividad del kiosko.
+
+            Los párrafos proporcionan estructura textual
+            y facilitan la interpretación del contenido.
+        -->
+
+
+        <!-- ============================================= -->
+        <!-- NAV: NAVEGACIÓN PRINCIPAL                     -->
+        <!-- ============================================= -->
+
+        <nav aria-label="Navegación principal">
+            <!--
+                NAV representa una región de navegación.
+
+                Agrupa enlaces importantes que permiten
+                desplazarse por el documento o el sitio.
+
+                ACCESIBILIDAD:
+
+                Los lectores de pantalla pueden identificar
+                NAV como una región de navegación.
+
+                ATRIBUTO ARIA-LABEL:
+
+                aria-label="Navegación principal"
+
+                Proporciona un nombre accesible
+                directamente a esta región.
+
+                Resulta especialmente útil cuando
+                existen varias regiones de navegación.
+
+                EJEMPLOS:
+
+                - Navegación principal.
+                - Navegación secundaria.
+                - Navegación del pie de página.
+
+                NAV ya tiene semántica de navegación,
+                por lo que no necesita role="navigation".
+
+                PRUEBA CON NARRADOR:
+
+                1. Activa el modo de exploración.
+                2. Utiliza D para recorrer las regiones.
+                3. Localiza la navegación principal.
+                4. Escucha el nombre de la región.
+            -->
+
+
+            <ul>
+                <!--
+                    UL representa una lista no ordenada.
+
+                    Agrupa elementos cuyo orden no es
+                    esencial para su significado.
+
+                    En este caso organiza el menú.
+
+                    ACCESIBILIDAD:
+
+                    Los lectores de pantalla pueden
+                    identificar la lista e informar
+                    sobre sus elementos.
+                -->
+
+
+                <li>
+                    <a href="#quienes-somos">
+                        Quiénes somos
+                    </a>
+                </li>
+
+                <!--
+                    LI representa un elemento de lista.
+
+                    A representa un enlace.
+
+                    href="#quienes-somos":
+                        Apunta al elemento identificado
+                        mediante id="quienes-somos".
+
+                    Este tipo de enlace se denomina
+                    enlace interno o enlace a fragmento.
+                -->
+
+
+                <li>
+                    <a href="#productos">
+                        Productos
+                    </a>
+                </li>
+
+                <!--
+                    El enlace apunta al elemento
+                    identificado mediante id="productos".
+
+                    El navegador utiliza el identificador
+                    para localizar el destino.
+                -->
+
+
+                <li>
+                    <a href="#horarios">
+                        Horarios
+                    </a>
+                </li>
+
+                <!--
+                    El atributo href contiene una referencia
+                    a un fragmento del documento.
+
+                    El texto del enlace proporciona
+                    su nombre accesible.
+                -->
+
+
+                <li>
+                    <a href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+                <!--
+                    El enlace utiliza el mismo mecanismo
+                    de navegación mediante fragmentos.
+
+                    ACCESIBILIDAD:
+
+                    Los enlaces nativos permiten
+                    la navegación mediante teclado.
+
+                    PRUEBA:
+
+                    1. Pulsa Tab para recorrer el menú.
+                    2. Observa qué enlace recibe el foco.
+                    3. Utiliza Enter para activar un enlace.
+                    4. Con Narrador, comprueba cómo se
+                       anuncia cada nombre de enlace.
+                -->
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================================= -->
+    <!-- MAIN: CONTENIDO PRINCIPAL                          -->
+    <!-- ================================================= -->
+
+    <main id="contenido-principal">
+        <!--
+            MAIN identifica el contenido principal
+            y específico del documento.
+
+            Se diferencia de otras regiones como:
+
+            HEADER:
+                Contenido introductorio.
+
+            NAV:
+                Enlaces de navegación.
+
+            MAIN:
+                Contenido principal.
+
+            FOOTER:
+                Información de cierre.
+
+            Normalmente se utiliza un único MAIN
+            visible en el documento.
+
+            ATRIBUTO ID:
+
+            id="contenido-principal"
+
+            Identifica el destino del enlace inicial:
+
+                href="#contenido-principal"
+
+            ACCESIBILIDAD:
+
+            MAIN proporciona una región principal
+            reconocible por lectores de pantalla.
+
+            PRUEBA CON NARRADOR:
+
+            1. Activa el modo de exploración.
+            2. Utiliza D para recorrer regiones.
+            3. Localiza la región principal.
+            4. Comprueba que contiene las secciones
+               del contenido del kiosko.
+        -->
+
+
+        <!-- ============================================= -->
+        <!-- SECTION: QUIÉNES SOMOS                         -->
+        <!-- ============================================= -->
+
+        <section id="quienes-somos"
+                 aria-labelledby="titulo-presentacion">
+
+            <!--
+                SECTION representa una agrupación temática.
+
+                En este caso contiene la presentación
+                del negocio.
+
+                DIFERENCIA ENTRE SECTION Y DIV:
+
+                SECTION:
+                    Agrupa contenido con un tema definido.
+
+                DIV:
+                    Es un contenedor genérico sin
+                    significado semántico específico.
+
+                ATRIBUTO ID:
+
+                id="quienes-somos"
+
+                Identifica la sección y permite
+                acceder a ella mediante enlaces internos.
+
+                ATRIBUTO ARIA-LABELLEDBY:
+
+                aria-labelledby="titulo-presentacion"
+
+                Establece el nombre accesible de la sección
+                utilizando el texto de otro elemento.
+
+                En este caso, el elemento de referencia es:
+
+                    <h2 id="titulo-presentacion">
+
+                ACCESIBILIDAD:
+
+                Una SECTION con nombre accesible puede
+                exponerse como una región identificable
+                por las tecnologías de asistencia.
+
+                DIFERENCIA ENTRE ATRIBUTOS:
+
+                aria-label:
+                    Proporciona directamente un nombre.
+
+                aria-labelledby:
+                    Obtiene el nombre desde otro elemento.
+
+                aria-describedby:
+                    Asocia una descripción complementaria.
+
+                PRUEBA CON NARRADOR:
+
+                1. Localiza la región con el modo
+                   de exploración activo.
+                2. Escucha el nombre de la sección.
+                3. Comprueba que utiliza el texto
+                   del encabezado correspondiente.
+            -->
+
+
+            <h2 id="titulo-presentacion">
+                Quiénes somos
+            </h2>
+
+            <!--
+                H2 representa un encabezado de nivel 2.
+
+                Identifica una sección principal.
+
+                ATRIBUTO ID:
+
+                id="titulo-presentacion"
+
+                Permite que aria-labelledby utilice
+                el texto de este encabezado como
+                nombre accesible de la sección.
+
+                PRUEBA:
+
+                Modifica temporalmente el texto del H2
+                y comprueba cómo cambia el nombre
+                accesible de la región.
+            -->
+
+
+            <p>
+                En <strong>Kiosko Benancio</strong>
+                tenemos los mejores periódicos
+                al mejor precio
+            </p>
+
+            <!--
+                STRONG indica que un fragmento del texto
+                tiene especial importancia semántica.
+
+                Los navegadores suelen representarlo
+                visualmente en negrita.
+
+                DIFERENCIA ENTRE STRONG Y B:
+
+                STRONG:
+                    Expresa importancia en el contenido.
+
+                B:
+                    Destaca visualmente texto sin expresar
+                    necesariamente mayor importancia.
+
+                La forma de anunciar STRONG depende
+                del lector de pantalla y su configuración.
+            -->
+
+
+            <!-- ========================================= -->
+            <!-- FIGURE: IMAGEN CON LEYENDA                -->
+            <!-- ========================================= -->
+
+            <figure>
+                <!--
+                    FIGURE agrupa contenido ilustrativo
+                    o autónomo.
+
+                    Puede utilizarse para:
+
+                    - Fotografías.
+                    - Ilustraciones.
+                    - Diagramas.
+                    - Gráficos.
+                    - Fragmentos de código.
+
+                    En este caso relaciona una imagen
+                    del kiosko con su leyenda.
+
+                    FIGURE proporciona una agrupación
+                    semántica entre ambos elementos.
+                -->
+
+
+                <img
+                    src="images/kiosko.jpg"
+                    alt="Ilustración del escaparate de nuestro Kiosko"
+                    width="400">
+
+                <!--
+                    IMG incorpora una imagen al documento.
+
+                    Es un elemento vacío y no necesita
+                    etiqueta de cierre.
+
+                    ATRIBUTO SRC:
+
+                    src="images/kiosko.jpg"
+
+                    Indica la ruta del archivo de imagen.
+
+                    Es una ruta relativa.
+
+                    El navegador busca kiosko.jpg
+                    dentro de la carpeta images,
+                    tomando como referencia el documento.
+
+                    ATRIBUTO ALT:
+
+                    alt="Ilustración del escaparate
+                         de nuestro Kiosko"
+
+                    Proporciona una alternativa textual
+                    a la información de la imagen.
+
+                    ACCESIBILIDAD:
+
+                    Permite transmitir información
+                    relevante a personas que utilizan
+                    lectores de pantalla.
+
+                    Cuando una imagen es puramente
+                    decorativa, suele utilizarse alt="".
+
+                    ATRIBUTO WIDTH:
+
+                    width="400"
+
+                    Establece una anchura declarada
+                    de 400 píxeles CSS.
+
+                    PRUEBA CON NARRADOR:
+
+                    1. Activa el modo de exploración.
+                    2. Utiliza G para localizar imágenes.
+                    3. Escucha el texto alternativo.
+                    4. Cambia temporalmente el atributo alt.
+                    5. Compara la información anunciada.
+                -->
+
+
+                <figcaption>
+                    La fachada de nuestro kiosko
+                </figcaption>
+
+                <!--
+                    FIGCAPTION proporciona una leyenda
+                    asociada a FIGURE.
+
+                    DIFERENCIA ENTRE ALT Y FIGCAPTION:
+
+                    ALT:
+                        Alternativa textual de la imagen.
+
+                    FIGCAPTION:
+                        Leyenda visible de la figura.
+
+                    Ambos pueden aportar información
+                    complementaria sin necesidad
+                    de repetir exactamente el mismo texto.
+                -->
+
+            </figure>
+
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- SECTION: NUESTROS PRODUCTOS                   -->
+        <!-- ============================================= -->
+
+        <section id="productos"
+                 aria-labelledby="titulo-productos">
+
+            <!--
+                SECTION agrupa contenido relacionado
+                con un tema específico.
+
+                Esta sección contiene el catálogo
+                de productos del kiosko.
+
+                ATRIBUTO ID:
+
+                id="productos"
+
+                Permite identificar la sección
+                y acceder a ella mediante el enlace:
+
+                    href="#productos"
+
+                ATRIBUTO ARIA-LABELLEDBY:
+
+                aria-labelledby="titulo-productos"
+
+                Obtiene el nombre accesible de la sección
+                desde el encabezado correspondiente.
+
+                ACCESIBILIDAD:
+
+                La región puede identificarse
+                mediante su nombre accesible.
+
+                PRUEBA CON NARRADOR:
+
+                1. Activa el modo de exploración.
+                2. Recorre las regiones con D.
+                3. Localiza la región de productos.
+                4. Comprueba cómo se anuncia su nombre.
+            -->
+
+
+            <h2 id="titulo-productos">
+                Nuestros Productos
+            </h2>
+
+            <!--
+                H2 representa un encabezado de nivel 2.
+
+                Identifica esta sección principal.
+
+                id="titulo-productos":
+                    Permite establecer la relación
+                    con aria-labelledby.
+
+                ACCESIBILIDAD:
+
+                Los lectores de pantalla pueden
+                recorrer los encabezados de nivel 2
+                mediante sus comandos de navegación.
+            -->
+
+
+            <p>
+                Estas son nuestras principales categorías
+            </p>
+
+            <!--
+                P representa un párrafo.
+
+                En este caso introduce el contenido
+                de la sección de productos.
+            -->
+
+
+            <!-- ========================================= -->
+            <!-- ARTICLE: PRENSA Y REVISTAS                -->
+            <!-- ========================================= -->
+
+            <article>
+                <!--
+                    ARTICLE representa una unidad
+                    de contenido autónoma.
+
+                    Puede utilizarse para:
+
+                    - Noticias.
+                    - Publicaciones.
+                    - Reseñas.
+                    - Fichas de productos.
+
+                    En este caso representa una categoría
+                    del catálogo del kiosko.
+
+                    DIFERENCIA ENTRE SECTION Y ARTICLE:
+
+                    SECTION:
+                        Agrupa contenido por temática.
+
+                    ARTICLE:
+                        Representa una unidad que puede
+                        comprenderse de forma independiente.
+
+                    Un ARTICLE puede encontrarse dentro
+                    de una SECTION.
+
+                    ACCESIBILIDAD:
+
+                    ARTICLE aporta semántica propia
+                    a la estructura del documento.
+
+                    Sus encabezados permiten localizar
+                    el contenido mediante navegación rápida.
+                -->
+
+
+                <h3>Prensa y revistas</h3>
+
+                <!--
+                    H3 representa un encabezado de nivel 3.
+
+                    Se utiliza para identificar una categoría
+                    subordinada al encabezado H2:
+
+                        Nuestros Productos
+
+                    JERARQUÍA:
+
+                    H1: Kiosko Benancio.
+                    H2: Nuestros Productos.
+                    H3: Prensa y revistas.
+
+                    ACCESIBILIDAD:
+
+                    La jerarquía de encabezados permite
+                    comprender cómo se organiza el contenido.
+
+                    PRUEBA CON NARRADOR:
+
+                    1. Activa el modo de exploración.
+                    2. Pulsa 3 para localizar encabezados H3.
+                    3. Comprueba que se anuncia
+                       "Prensa y revistas".
+                -->
+
+
+                <img
+                    src="images/periodicos.jpg"
+                    alt="Periódicos y revistas en un estante"
+                    width="200">
+
+                <!--
+                    IMG incorpora una imagen de la categoría.
+
+                    ATRIBUTO SRC:
+
+                    src="images/periodicos.jpg"
+
+                    Indica la ubicación del archivo.
+
+                    ATRIBUTO ALT:
+
+                    alt="Periódicos y revistas en un estante"
+
+                    Proporciona una alternativa textual
+                    que describe la información relevante.
+
+                    ATRIBUTO WIDTH:
+
+                    width="200"
+
+                    Establece una anchura declarada
+                    de 200 píxeles CSS.
+
+                    ACCESIBILIDAD:
+
+                    El texto alternativo ayuda a comprender
+                    el contenido de la imagen sin verla.
+
+                    PRUEBA CON NARRADOR:
+
+                    1. Utiliza G para localizar la imagen.
+                    2. Escucha su texto alternativo.
+                    3. Compara su lectura con la imagen
+                       de la sección Quiénes somos.
+                -->
+
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
