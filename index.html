@@ -840,6 +840,755 @@
             </article>
         </section>
 
+        <aside aria-labelledby="titulo-horarios">
+            <h2 id="titulo-horarios">AVISO PARA CLIENTES</h2>
+            <p>Este sábado cerramos por boda</p>
+        </aside>
+
+
+        <section id="horarios" aria-labelledby="titulo-horarios">
+            <h2 id="titulo-horarios">Horario de atención</h2>
+                <table border="1">
+
+                    <caption>Horario del kioskio</caption>
+
+                    <thead>
+                        <tr><th scope="col">Días</th><th scope="col">Mañana</th><th scope="col">Tarde</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Lunes a Viernes</th><td>9:00 a 13:00</td><td>17:00 a 20:00</td></tr>
+                        <tr><th scope="row">Sábado</th><td>10:00 a 13:00</td><td>Cerrado</td></tr>
+                        <tr><th scope="row">Domingo</th><td>Cerrado</td><td>Cerrado</td></tr>
+                    </tbody>                   
+                </table>
+                 <p><small>Horario de invierno</small></p>              
+        </section>
+
+        <section id="contacto"
+                 aria-labelledby="titulo-contacto">
+
+            <h2 id="titulo-contacto">
+                Contacta con nosotros
+            </h2>
+
+            <p>
+                Rellena este formulario de ejemplo.
+                <strong>No envía datos a ningún servidor.</strong>
+            </p>
+
+
+            <!--
+            =================================================
+            FORM: FORMULARIO HTML
+            =================================================
+
+            FORM agrupa controles destinados
+            a recoger y enviar información.
+
+            En HTML podemos crear formularios
+            sin utilizar JavaScript.
+
+            El navegador proporciona comportamientos
+            nativos como:
+
+            - Introducción de datos.
+            - Navegación mediante teclado.
+            - Selección de opciones.
+            - Validación básica.
+            - Envío de información.
+
+            ATRIBUTO ACTION:
+
+            action="#contacto"
+
+            Indica el destino del envío.
+
+            En este ejemplo apunta a la misma página,
+            con el fragmento contacto.
+
+            ATRIBUTO METHOD:
+
+            method="get"
+
+            Indica que se utiliza el método GET.
+
+            Los valores del formulario se incorporan
+            normalmente como parámetros de la URL.
+
+            EJEMPLO:
+
+            ?nombre=Ana&asunto=horarios
+
+            IMPORTANTE:
+
+            GET no debe utilizarse para enviar
+            contraseñas ni información sensible.
+
+            Los parámetros pueden quedar registrados
+            en el historial y en otros sistemas.
+
+            Este formulario no tiene un backend
+            que procese o almacene los datos.
+
+            Sin embargo, el navegador sí puede realizar
+            una navegación o petición al enviarlo.
+
+            Para esta práctica utilizaremos
+            exclusivamente datos ficticios.
+            =================================================
+            -->
+
+            <form action="#contacto" method="get">
+
+
+                <!--
+                =============================================
+                FIELDSET: AGRUPACIÓN DE CONTROLES
+                =============================================
+
+                FIELDSET agrupa controles relacionados.
+
+                En este caso contiene los datos
+                de identificación y contacto.
+
+                LEGEND proporciona un título al grupo.
+
+                Esta agrupación tiene valor semántico.
+
+                Los lectores de pantalla pueden utilizar
+                el título del grupo para proporcionar
+                contexto a los controles.
+
+                El navegador suele representar
+                FIELDSET mediante un borde.
+
+                Esa apariencia visual no constituye
+                su significado principal.
+                =============================================
+                -->
+
+                <fieldset>
+
+                    <legend>
+                        Datos de contacto
+                    </legend>
+
+
+                    <!--
+                    =========================================
+                    LABEL: ETIQUETA DE UN CONTROL
+                    =========================================
+
+                    LABEL proporciona un nombre visible
+                    a un control del formulario.
+
+                    ATRIBUTO FOR:
+
+                    for="nombre"
+
+                    Debe coincidir con el ID del control:
+
+                    id="nombre"
+
+                    Esta asociación permite:
+
+                    1. Identificar el campo.
+                    2. Facilitar su interpretación
+                       por lectores de pantalla.
+                    3. Activar o enfocar el control
+                       al pulsar sobre su etiqueta.
+
+                    INPUT:
+
+                    Representa un control de entrada.
+
+                    Es un elemento vacío.
+
+                    TYPE="TEXT":
+
+                    Indica que se introduce texto.
+
+                    ID="NOMBRE":
+
+                    Identificador único del elemento.
+
+                    NAME="NOMBRE":
+
+                    Nombre del dato durante el envío.
+
+                    Si escribimos Ana, el formulario
+                    puede enviar el parámetro:
+
+                    nombre=Ana
+
+                    AUTOCOMPLETE="NAME":
+
+                    Indica que el campo corresponde
+                    al nombre de una persona.
+
+                    El navegador puede ofrecer
+                    información de autocompletado.
+
+                    REQUIRED:
+
+                    Indica que el campo es obligatorio.
+
+                    Es un atributo booleano.
+
+                    MINLENGTH="2":
+
+                    Exige una longitud mínima de
+                    dos caracteres para la entrada
+                    proporcionada por el usuario.
+
+                    ACCESIBILIDAD:
+
+                    El campo tiene un nombre accesible
+                    gracias a su LABEL asociado.
+
+                    El atributo REQUIRED permite
+                    identificarlo como obligatorio.
+
+                    PRUEBA:
+
+                    Intentar enviar el formulario
+                    dejando este campo vacío.
+
+                    Comprobar la validación nativa.
+                    =========================================
+                    -->
+
+                    <p>
+
+                        <label for="nombre">
+                            Nombre (obligatorio):
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            autocomplete="name"
+                            required
+                            minlength="2">
+
+                    </p>
+
+
+                    <!--
+                    =========================================
+                    INPUT TYPE="EMAIL"
+                    =========================================
+
+                    Este control está destinado
+                    a introducir direcciones de correo.
+
+                    TYPE="EMAIL":
+
+                    Permite al navegador comprobar
+                    un formato básico de correo electrónico.
+
+                    No verifica que la cuenta exista.
+
+                    AUTOCOMPLETE="EMAIL":
+
+                    Identifica el propósito del campo
+                    para facilitar el autocompletado.
+
+                    REQUIRED:
+
+                    Hace obligatorio el campo.
+
+                    LABEL:
+
+                    Proporciona el nombre accesible
+                    mediante la asociación FOR e ID.
+
+                    PRUEBA:
+
+                    Escribir un texto sin formato
+                    de correo electrónico.
+
+                    Intentar enviar el formulario.
+
+                    Observar el mensaje de validación.
+                    =========================================
+                    -->
+
+                    <p>
+
+                        <label for="correo">
+                            Correo electrónico (obligatorio):
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            autocomplete="email"
+                            required>
+
+                    </p>
+
+                </fieldset>
+
+
+                <!--
+                =============================================
+                SEGUNDO FIELDSET
+                =============================================
+
+                Agrupa los controles relacionados
+                con el contenido de la consulta.
+
+                LEGEND proporciona el nombre del grupo.
+
+                Esto permite separar semánticamente:
+
+                - Datos de contacto.
+                - Información de la consulta.
+                =============================================
+                -->
+
+                <fieldset>
+
+                    <legend>
+                        Tu consulta
+                    </legend>
+
+
+                    <!--
+                    =========================================
+                    SELECT: LISTA DESPLEGABLE
+                    =========================================
+
+                    SELECT permite elegir una opción
+                    entre varias alternativas.
+
+                    LABEL identifica el control.
+
+                    OPTION representa cada alternativa.
+
+                    ATRIBUTO VALUE:
+
+                    Indica el valor que se enviará
+                    cuando se seleccione esa opción.
+
+                    El texto visible y el valor enviado
+                    no tienen por qué coincidir.
+
+                    EJEMPLO:
+
+                    <option value="productos">
+                        Disponibilidad de productos
+                    </option>
+
+                    El usuario ve:
+                        Disponibilidad de productos
+
+                    El formulario envía:
+                        productos
+
+                    PRIMERA OPCIÓN:
+
+                    value=""
+
+                    Representa una opción inicial
+                    que no contiene un valor útil.
+
+                    REQUIRED:
+
+                    Obliga a seleccionar una opción
+                    con un valor válido.
+
+                    ACCESIBILIDAD:
+
+                    La asociación entre LABEL y SELECT
+                    proporciona un nombre accesible.
+
+                    El navegador permite manejar
+                    este control mediante teclado.
+                    =========================================
+                    -->
+
+                    <p>
+
+                        <label for="asunto">
+                            Motivo:
+                        </label>
+
+                        <select
+                            id="asunto"
+                            name="asunto"
+                            required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="productos">
+                                Disponibilidad de productos
+                            </option>
+
+                            <option value="horarios">
+                                Horarios
+                            </option>
+
+                            <option value="otros">
+                                Otra consulta
+                            </option>
+
+                        </select>
+
+                    </p>
+
+
+                    <!--
+                    =========================================
+                    TEXTAREA: TEXTO DE VARIAS LÍNEAS
+                    =========================================
+
+                    TEXTAREA permite introducir
+                    textos de mayor extensión.
+
+                    A diferencia de INPUT,
+                    tiene etiqueta de apertura y cierre.
+
+                    ATRIBUTOS:
+
+                    ID:
+                        Identifica el control.
+
+                    NAME:
+                        Identifica el dato enviado.
+
+                    ROWS="5":
+                        Número inicial de filas visibles.
+
+                    COLS="40":
+                        Anchura aproximada en columnas
+                        de caracteres.
+
+                    REQUIRED:
+                        Campo obligatorio.
+
+                    MINLENGTH="10":
+                        Longitud mínima de diez caracteres.
+
+                    ARIA-DESCRIBEDBY:
+
+                    aria-describedby="ayuda-mensaje"
+
+                    Relaciona el control con otro
+                    elemento que contiene información
+                    descriptiva adicional.
+
+                    Más abajo encontramos:
+
+                    <p id="ayuda-mensaje">
+
+                    La coincidencia entre los valores
+                    permite establecer la relación.
+
+                    DIFERENCIA IMPORTANTE:
+
+                    LABEL:
+                        Identifica el campo.
+
+                    ARIA-DESCRIBEDBY:
+                        Añade una descripción complementaria.
+
+                    No debemos utilizar ARIA-DESCRIBEDBY
+                    como sustituto de LABEL.
+
+                    PRUEBA CON NARRADOR:
+
+                    Situarnos en el campo Mensaje.
+
+                    Escuchar su nombre accesible.
+
+                    Comprobar si se anuncia también
+                    la instrucción asociada.
+
+                    El comportamiento audible puede variar
+                    según el lector y su configuración.
+                    =========================================
+                    -->
+
+                    <p>
+
+                        <label for="mensaje">
+                            Mensaje (obligatorio):
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            cols="40"
+                            required
+                            minlength="10"
+                            aria-describedby="ayuda-mensaje"></textarea>
+
+                    </p>
+
+
+                    <!--
+                    =========================================
+                    DESCRIPCIÓN ACCESIBLE DEL CAMPO
+                    =========================================
+
+                    Este párrafo contiene instrucciones
+                    adicionales para el campo Mensaje.
+
+                    ATRIBUTO ID:
+
+                    id="ayuda-mensaje"
+
+                    Permite que TEXTAREA lo referencie
+                    mediante ARIA-DESCRIBEDBY.
+
+                    El texto es visible para todos.
+
+                    Además, puede ser utilizado por
+                    lectores de pantalla como descripción
+                    accesible del campo.
+
+                    Es una buena práctica proporcionar
+                    instrucciones comprensibles antes
+                    de que el usuario envíe el formulario.
+                    =========================================
+                    -->
+
+                    <p id="ayuda-mensaje">
+                        Escribe al menos 10 caracteres
+                        para explicar tu consulta.
+                    </p>
+
+
+                    <!--
+                    =========================================
+                    CHECKBOX: CASILLA DE VERIFICACIÓN
+                    =========================================
+
+                    TYPE="CHECKBOX":
+
+                    Representa una opción que puede
+                    estar marcada o desmarcada.
+
+                    ID="RESPUESTA":
+
+                    Permite asociar su LABEL.
+
+                    NAME="RESPUESTA":
+
+                    Nombre del dato enviado.
+
+                    VALUE="SI":
+
+                    Valor enviado cuando la casilla
+                    está marcada.
+
+                    Cuando no está marcada, normalmente
+                    no se incluye este campo en el envío.
+
+                    LABEL:
+
+                    Proporciona un nombre accesible
+                    a la casilla.
+
+                    Al pulsar sobre el texto del LABEL,
+                    también podemos cambiar su estado.
+
+                    ACCESIBILIDAD:
+
+                    Los lectores de pantalla pueden
+                    anunciar el nombre y el estado
+                    de la casilla.
+
+                    PRUEBA CON TECLADO:
+
+                    1. Llegar mediante Tab.
+                    2. Pulsar Espacio.
+                    3. Comprobar que se marca.
+                    4. Pulsar Espacio otra vez.
+                    5. Comprobar que se desmarca.
+                    =========================================
+                    -->
+
+                    <p>
+
+                        <input
+                            type="checkbox"
+                            id="respuesta"
+                            name="respuesta"
+                            value="si">
+
+                        <label for="respuesta">
+                            Me gustaría recibir una
+                            respuesta por correo.
+                        </label>
+
+                    </p>
+
+                </fieldset>
+
+
+                <!--
+                =============================================
+                BUTTON TYPE="SUBMIT"
+                =============================================
+
+                BUTTON representa un botón interactivo.
+
+                TYPE="SUBMIT":
+
+                Indica que su función es enviar
+                el formulario al destino establecido.
+
+                Antes del envío, el navegador puede
+                ejecutar las validaciones HTML nativas.
+
+                Por ejemplo:
+
+                - Campos obligatorios.
+                - Formato de correo electrónico.
+                - Longitud mínima.
+                - Selección de una opción válida.
+
+                ACCESIBILIDAD:
+
+                BUTTON dispone de semántica nativa.
+
+                Los lectores de pantalla pueden
+                reconocerlo como botón.
+
+                También incorpora comportamiento
+                de teclado sin necesitar JavaScript.
+
+                IMPORTANTE:
+
+                No debemos utilizar DIV para simular
+                un botón cuando podemos utilizar BUTTON.
+
+                En nuestro proyecto, el envío es
+                únicamente una demostración.
+
+                No existe un backend que almacene
+                ni procese la consulta.
+                =============================================
+                -->
+
+                <button type="submit">
+                    Enviar consulta de prueba
+                </button>
+
+
+                <!--
+                =============================================
+                BUTTON TYPE="RESET"
+                =============================================
+
+                TYPE="RESET":
+
+                Devuelve los controles del formulario
+                a sus valores iniciales.
+
+                No envía los datos.
+
+                Es útil para demostrar que los botones
+                pueden tener diferentes funciones.
+
+                PRUEBA:
+
+                1. Rellenar todos los campos.
+                2. Seleccionar un motivo.
+                3. Marcar la casilla.
+                4. Pulsar Restablecer campos.
+                5. Comprobar que se recuperan
+                   los valores iniciales.
+
+                En aplicaciones reales debemos utilizar
+                este tipo de botón con precaución.
+
+                Un restablecimiento accidental puede
+                provocar la pérdida de información
+                introducida por el usuario.
+                =============================================
+                -->
+
+                <button type="reset">
+                    Restablecer campos
+                </button>
+
+            </form>
+
+        </section>
+
+<footer>
+
+
+        <!--
+        SMALL:
+
+        Representa información secundaria,
+        aclaraciones o comentarios accesorios.
+
+        Aquí contiene una nota de autoría
+        y finalidad educativa.
+
+        El símbolo © representa copyright.
+
+        También podríamos escribirlo mediante
+        la entidad HTML &copy;.
+
+        Los navegadores suelen representar SMALL
+        con un tamaño de letra menor.
+        -->
+
+        <p>
+            <small>
+                © 2026 Kiosko Benancio.
+                Proyecto educativo de HTML5.
+            </small>
+        </p>
+
+
+        <!--
+        ENLACE INTERNO AL INICIO
+
+        La etiqueta A crea un hipervínculo.
+
+        href="#inicio" apunta al elemento
+        cuyo identificador sea inicio.
+
+        Al principio del documento encontramos:
+
+        <header id="inicio">
+
+        De esta forma podemos regresar
+        a la cabecera de la página.
+
+        Este enlace puede utilizarse
+        mediante teclado.
+
+        PRUEBA:
+
+        1. Situarnos al final de la página.
+        2. Localizar Volver al inicio.
+        3. Pulsar Enter.
+        4. Comprobar el desplazamiento.
+        -->
+
+        <p>
+            <a href="#inicio">
+                Volver al inicio
+            </a>
+        </p>
+
+    </footer>
+
+
     </main>
 
 </body>
